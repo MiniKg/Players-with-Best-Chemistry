@@ -1,0 +1,29 @@
+#####README######
+We used the structural SVM software (with cutting plane algorithm) created by Thorsten Joachims. We used the API to implement our learning algorithm.
+
+Files in this folder:
+
+nba_player_pair.m is the implementation of our algorithm. It takes training set and testing set as input and returns the final prediction accuracy.
+
+cross_validation.m is our implmentation of 3-fold cross validation. 
+
+Please note: these two files are written by ourselves and the rest is part of the software.
+
+dataset2.mat is the dataset that has 18 features for each player and is not too informative. (The first column of the cell team_players is the data that we used. The second column is used to store the information for manually checking player's personal information and please ignore this column.)
+
+####How to Run the program######
+First make sure the toolbox is compiled.
+
+To compile the code, you will need MATLAB and a C compiler (typical Xcode under Mac, and GCC under Linux, and Visual C under Windows). On Mac and Linux, assuming that MATLAB mex command is available on the command line search path, the following command should compile the MEX file implementing the wrapper:
+
+$ make
+
+In windows, please type command in MATLAB command line:
+ makefile_windows
+
+Then change the matfile name to change the dataset, and change the string of parameters indicates in : http://www.cs.cornell.edu/People/tj/svm_light/svm_struct.html
+
+
+
+
+

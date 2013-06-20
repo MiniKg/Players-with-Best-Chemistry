@@ -1,0 +1,26 @@
+#####README######
+We used the CVX package created by Stephen P. Boyd for optimization.
+
+Files in this folder:
+
+trainAndTest_CVX.m is the implementation of our brute force method. Please uncomment any desired dataset at the beginning of this file as instructed by the comments. We separate each fold of the 3-fold cross validation because running 3-fold together might take more than half an hour. Each fold alone might take more than ten minutes for dataset 1. For dataset 2, each fold takes just more than one minutes, but we separated dataset 2, too, just for convenience.
+
+generate_3_folds.m is to generate the cross validation files. 
+
+Please note: these two files are written by ourselves and the CVX package is off-the-shelf software.
+
+dataset1.mat is the dataset that has 30 features for each player and is quite informative.
+
+dataset2.mat is the dataset that has 18 features for each player and is not too informative. (The first column of the cell team_players is the data that we used. The second column is used to store the information for manually checking player's personal information and please ignore this column.)
+
+####How to Run the program######
+Please install CVX package first. http://cvxr.com/cvx/
+
+Uncomment the data that is about to test on, and type in the Matlab command window:
+trainAndTest_CVX
+Please make sure when changing dataset, also change the number of features as instructed in the comments in trainAndTest_CVX.m
+
+
+
+
+
